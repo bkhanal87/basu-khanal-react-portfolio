@@ -27,18 +27,21 @@
 // src/App.js
 
 import React from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import { BrowserRouter as Router } from "react-router-dom";
+// import Footer from "./components/Footer";
+// import Header from "./components/Header";
 import NavMenu from "./components/NavMenu";
-import Project from "./components/Project";
+// import Project from "./components/Project";
 
 export default function App() {
   return (
     <main className="text-gray-400 bg-gray-900 body-font">
-      <Footer />
-      <Header />
-      <Navbar />
-      <Project />
+      {/* <Footer />
+      <Header /> */}
+      <Router>
+        <NavMenu />
+      </Router>
+      {/* <Project /> */}
     </main>
   );
 }
