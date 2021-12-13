@@ -5,14 +5,15 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Resume from "./components/resume/Resume";
 
-import "./app.scss"
+import "./app.scss";
 
-
+import { useState } from "react";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(true);
   return (
     <div className="app">
-      <Header />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <About />
         <Portfolio />
