@@ -2,6 +2,14 @@
   background-color: white;
   display: flex;
 
+  .left {
+    flex: 1;
+
+    img {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
   .right {
     flex: 1;
     display: flex;
