@@ -2,6 +2,9 @@ import { SpaRounded } from "@material-ui/icons";
 import { useState } from "react";
 import "./contact.scss";
 
+// Here we import a helper function that will check if the email is valid
+import { checkPassword, validateEmail } from "../../utils/helpers";
+
 export default function Contact() {
   const [message, setMessage] = useState(false);
 
@@ -22,11 +25,9 @@ export default function Contact() {
           <input type="text" placeholder="Email" />
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>
-          {message && <span>Thanks, I'll reply ASAP</span>}
+          {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
       </div>
-
-      {/* name, an email address, and a message form (notification that this field is required*/}
     </div>
   );
 }
